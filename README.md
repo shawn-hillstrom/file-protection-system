@@ -26,21 +26,11 @@ To create a protected file:
 3. Create another file with the format **FILENAME.access** which is also private and specify all users with access permission. Each user's name and permission level (r, w, or b) should be specified on separate lines with whitespace separating each name and permission level.
 
 To build the system:
-1. Place **get.c** and **Makefile** in a directory accessible by other users and run
-'''
-make
-'''
-2. To remove the executable run
-'''
-make clean
-'''
+1. Place **get.c** and **Makefile** in a directory accessible by other users and run `make`.
+2. To remove the executable run `make clean`.
 
 To use the system:
-1. Run
-'''
-./get SOURCEPATH DESTINATIONPATH
-'''
-where SOURCEPATH is the path for the restricted file and DESTINATIONPATH is the path for the copy of the file with specified access priviledges for the user running **get**.
+1. Run `./get SOURCEPATH DESTINATIONPATH` where SOURCEPATH is the path for the restricted file and DESTINATIONPATH is the path for the copy of the file with specified access priviledges for the user running **get**.
 
 **NOTE:** Users trying to access files should specify a destination path that he or she has write access in, otherwise get will exit silently.
 
